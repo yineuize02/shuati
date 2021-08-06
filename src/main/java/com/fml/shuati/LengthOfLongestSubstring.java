@@ -2,7 +2,7 @@ package com.fml.shuati;
 
 import java.util.HashSet;
 
-/** https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/ */
+/** 滑动窗口 https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/ */
 public class LengthOfLongestSubstring {
 
   public static void main(String[] args) {

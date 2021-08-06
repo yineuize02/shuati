@@ -1,6 +1,6 @@
 package com.fml.shuati;
 
-/** https://leetcode-cn.com/problems/maximum-subarray/ */
+/** 贪心 https://leetcode-cn.com/problems/maximum-subarray/ */
 public class MaxSubArray {
 
   public static void main(String[] args) {

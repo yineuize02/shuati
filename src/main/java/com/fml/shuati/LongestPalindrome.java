@@ -1,6 +1,6 @@
 package com.fml.shuati;
 
-/** https://leetcode-cn.com/problems/longest-palindromic-substring/ */
+/** 动态规划 https://leetcode-cn.com/problems/longest-palindromic-substring/ */
 public class LongestPalindrome {
 
   /** @param args */
