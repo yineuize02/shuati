@@ -1,6 +1,7 @@
 package com.fml.shuati;
 
-import com.fml.shuati.ListNodeUtils.ListNode;
+import com.fml.shuati.utils.ListNodeUtils;
+import com.fml.shuati.utils.ListNodeUtils.ListNode;
 import java.util.List;
 
 /** https://leetcode-cn.com/problems/add-two-numbers/ */
