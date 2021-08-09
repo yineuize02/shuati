@@ -1,5 +1,6 @@
 package com.fml.shuati;
 
+import com.fml.shuati.ListNodeUtils.ListNode;
 import java.util.List;
 
 /** https://leetcode-cn.com/problems/add-two-numbers/ */
@@ -9,8 +10,8 @@ public class AddTwoNumbers {
     //
 
     var tt = new AddTwoNumbers();
-    var l1 = tt.createList(List.of(9, 9));
-    var l2 = tt.createList(List.of(9));
+    var l1 = ListNodeUtils.createFromList(List.of(9, 9));
+    var l2 = ListNodeUtils.createFromList(List.of(9));
     var result = tt.addTwoNumbers(l1, l2);
   }
 
@@ -50,38 +51,5 @@ public class AddTwoNumbers {
     }
 
     return resultList;
-  }
-
-  private ListNode createList(List<Integer> list) {
-
-    ListNode head = new ListNode();
-    ListNode node = head;
-
-    for (int i = 0; i < list.size(); ++i) {
-      int n = list.get(i);
-      node.val = n;
-      if (i < list.size() - 1) {
-        node.next = new ListNode();
-        node = node.next;
-      }
-    }
-
-    return head;
-  }
-
-  public static class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode() {}
-
-    ListNode(int val) {
-      this.val = val;
-    }
-
-    ListNode(int val, ListNode next) {
-      this.val = val;
-      this.next = next;
-    }
   }
 }
