@@ -1,7 +1,7 @@
 package com.fml.shuati.utils;
 
 public class TreeNodeUtils {
-  public class TreeNode {
+  public static class TreeNode {
     public int val;
     public TreeNode left;
     public TreeNode right;
