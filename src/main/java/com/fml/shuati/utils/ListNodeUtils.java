@@ -48,6 +48,10 @@ public class ListNodeUtils {
       head = head.next;
     }
 
+    if (sb.length() == 0) {
+      return "[]";
+    }
+
     return sb.toString();
   }
 }
