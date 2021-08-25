@@ -57,28 +57,37 @@ public class JuZhenZhongDeLuJingLcof {
 
     path[m][n] = 1;
 
-    boolean right = false;
+    boolean deep = false;
     if (n + 1 < sizeN && index + 1 < word.length()) {
-      right = check(board, path, sizeN, sizeM, n + 1, m, index + 1, word);
+      deep = check(board, path, sizeN, sizeM, n + 1, m, index + 1, word);
+      if (deep) {
+        return true;
+      }
     }
 
-    boolean left = false;
     if (n - 1 >= 0 && index + 1 < word.length()) {
-      left = check(board, path, sizeN, sizeM, n - 1, m, index + 1, word);
+      deep = check(board, path, sizeN, sizeM, n - 1, m, index + 1, word);
+      if (deep) {
+        return true;
+      }
     }
 
-    boolean up = false;
     if (m - 1 >= 0 && index + 1 < word.length()) {
-      up = check(board, path, sizeN, sizeM, n, m - 1, index + 1, word);
+      deep = check(board, path, sizeN, sizeM, n, m - 1, index + 1, word);
+      if (deep) {
+        return true;
+      }
     }
 
-    boolean down = false;
     if (m + 1 < sizeM && index + 1 < word.length()) {
-      down = check(board, path, sizeN, sizeM, n, m + 1, index + 1, word);
+      deep = check(board, path, sizeN, sizeM, n, m + 1, index + 1, word);
+      if (deep) {
+        return true;
+      }
     }
 
     path[m][n] = 0;
 
-    return right || left || up || down;
+    return false;
   }
 }
